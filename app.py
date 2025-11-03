@@ -1,7 +1,10 @@
+from flask_cors import CORS
 from flask import Flask, jsonify, request
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)
+
 
 # Simulated book database
 book_db = {
@@ -25,3 +28,4 @@ def search_book():
 
 if __name__ == '__main__':
     app.run()
+
